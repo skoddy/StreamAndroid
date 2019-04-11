@@ -27,10 +27,13 @@ public class MainActivity extends AppCompatActivity
 
     private TextView mMainText;
     private TextView navUsername;
-    private FirebaseAuth.AuthStateListener authStateListener = auth -> {
-        //  Check if user is signed in
-        FirebaseUser user = auth.getCurrentUser();
-        updateUI(user);
+    private FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+        public void onAuthStateChanged(FirebaseAuth auth) {
+            //  Check if user is signed in and do what you want
+            FirebaseUser firebaseUser = auth.getCurrentUser();
+            updateUI(firebaseUser);
+        }
+
     };
 
     protected void onStart() {

@@ -1,4 +1,11 @@
 package com.skottie.android.stream;
 
-public interface User {
+public class User {
+
+    public String uid;
+    public String displayName;
+    public User() {
+
+    }
+
 }

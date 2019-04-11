@@ -35,7 +35,7 @@ public class LoginActivity extends BaseActivity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         // Views
         mStatusTextView = findViewById(R.id.status);
         mDetailTextView = findViewById(R.id.detail);
